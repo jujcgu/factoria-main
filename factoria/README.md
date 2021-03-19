@@ -27,3 +27,15 @@ En este archivo se encuentra enlaces a diferentes librerias y además de la inse
 #src
 
 En esta carpeta encontraremos los diferentes componentes, los recursos como las imágenes además del archivo principal de estilos, el app.js, el index.js, el package.json, el readme.md y por supuesto el archivo de .git donde se excluyen los modulos de node.
+
+#Ramas
+
+En este repositorio encontrarás el código también por las ramas, ve a la sección de Branches o bien a estos enlaces:
+
+[LoginBranch](https://github.com/vegas29/Proyecto-Factoria/tree/LoginBranch)
+
+[InvestigacionesBranch](https://github.com/vegas29/Proyecto-Factoria/tree/InvestigacionesBranch)
+
+[PublicacionesBranch](https://github.com/vegas29/Proyecto-Factoria/tree/Publicaciones)
+
+[PanelBranch](https://github.com/vegas29/Proyecto-Factoria/tree/Panel)
