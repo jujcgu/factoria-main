@@ -1,0 +1,30 @@
+footer{
+    background-color: var(--colorPrimaro);
+    height: 350px;
+}
+.pBarraFooter{
+    background-color: var(--colorPrimaro);
+    height: 20px;
+    border-bottom: 5px solid rgb(85, 81, 81);
+}
+
+.navegacionFooter{
+    background-color: rgba(202, 202, 202);
+    max-height: 38px;
+}
+
+.navegacionFooterIcono{
+    padding: 10px 0px 9px 0px;
+}
+
+.navegacionFooterIcono a{
+    margin: auto;
+}
+
+.navegacionFooterIcono a p{
+    font-size: 0.8em;
+}
+.barraDiagonal{
+    filter: blur(0.3px);
+    font-size: 1.2em;
+}

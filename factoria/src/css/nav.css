@@ -1,0 +1,166 @@
+.barra{
+    height: 28px !important;
+}
+
+.navbar-principal{
+    height: 28px !important;
+    background-color: var(--colorSecundario);
+}
+
+.navbar-principal ul li a{
+    color: var(--colorPrimaro) !important;
+    font-weight: bold;
+}
+
+.atecion-c{
+    height: 28px !important;
+    margin-left: 47%;
+}
+
+.atecion-c li a{
+    margin-bottom: 0px !important;
+    padding: 0px;
+    height: 28px;
+    padding-top: 2px !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.navbar-secundaria{
+
+    height: 28px !important;
+    padding-bottom: 6px !important;
+    margin-right: 4rem;
+}
+
+.navbar-secundaria ul{
+
+    height: 28px !important;
+}
+
+.navbar-secundaria ul li a{
+
+    padding-left: 20px !important;
+    height: 28px !important;
+    
+
+}
+
+.borde{
+    border-left: 1px solid black !important;
+    margin-top: 7px !important;
+    margin-bottom: 2px !important;
+    margin-left: 8px !important;
+}
+
+.div-nav-principal{
+    background-color: var(--colorPrimaro);
+    height:48px;
+    
+}
+
+.div-nav-principal a{
+    color: var(--colorSecundario) !important;
+    margin-bottom: 0 !important;
+}
+
+#circulo{
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--colorSecundario);
+    
+}
+
+.search{
+    width:auto;
+    background-color:#fff !important;
+    width: 35%;
+    opacity: .8;
+    float: left;
+    margin-left: 8%;
+}
+
+.search ul{
+
+    list-style: none;    
+    padding: 3px;
+    margin-bottom: 0 !important;
+  
+}
+
+.search ul li{
+
+    display: inline-block;  
+}
+
+.search ul li select{
+
+    border: none;
+
+
+}
+.search ul li input{
+
+    border: none !important;
+    width: 100%;
+
+}
+
+.search ul li input:focus{
+
+    border: none !important;
+    outline: none !important;
+
+}
+
+.buscarTexto{
+    margin-left: 7px;
+    border-left: 1px solid black;
+    padding-left: 7px;
+    width: 33rem;
+}
+
+.lupa{
+    border: none;
+    background: transparent;
+    border-left: 1px solid black !important;
+}
+
+.search2{
+    width: auto;
+    margin-right: 6%;
+    height: 28px;
+
+}
+
+.search2 ul{
+    list-style: none;    
+    padding: 5px;
+    margin-bottom: 0 !important;
+    height: 25px;
+    
+}
+
+.search2 ul li{
+
+    display: inline-block;  
+    margin-left: 14px;
+    height: 25px;
+    
+}
+
+.search2 ul li a{
+    height: 25px;
+}
+
+.ES{
+    margin-left: 6%;
+}
+
+.ES a{
+    height: 25px;
+    margin-top: 3px;
+}
+
