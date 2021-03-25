@@ -12,7 +12,7 @@ const Login = () => {
     return (
         <div>
             <div className="text-center">
-                <img src={LogoUsco}></img>
+                <img src={LogoUsco} className="logolargo"></img>
             </div>
             <div className="barra"></div>
             <div className="container">
@@ -55,16 +55,16 @@ const Login = () => {
 
                     <a href="#!">¿Olvidaste tu contraseña?</a>
 
-                    <Link to={'/register'} className="enlace-cuenta">
+                    <p className="enlace-cuenta text-center">
                         ¿No tienes una cuenta?
-                    </Link>
+                    </p>
 
                     <div className="campo-form">
-                        <input
-                            type="submit"
-                            value="Registrate"
-                            className="button-login"
-                        />
+
+                        <Link to={'/register'} className="button-login">
+                            Registrate
+                        </Link>
+
                     </div>
                 </form>
             </div>

@@ -52,6 +52,16 @@ h2 {
 
 /**Clases auxiliares**/
 
+.logolargo{
+    width: 90%;
+}
+
+@media (min-width:468px){
+    .logolargo{
+        width: 500px;
+    }
+}
+
 .text-center {
     text-align: center;
 }
@@ -138,7 +148,7 @@ h2 {
 @media(min-width:360px) {
     .imglogin {
         top: -100px;
-        left: 8rem;
+        left: 6.1rem;
     }
 }
 
@@ -207,7 +217,7 @@ a {
 }
 
 .button {
-    padding: 0.8rem 12rem;
+    padding: 0.8rem 10rem;
     background-color: var(--colorPrimaro);
     border: 0.8px solid #fff;
     border-radius: 5rem;

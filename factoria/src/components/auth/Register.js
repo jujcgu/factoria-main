@@ -11,7 +11,7 @@ const Register = () => {
     return (
         <div>
             <div className="text-center">
-                <img src={LogoUsco}></img>
+                <img src={LogoUsco} className="logolargo"></img>
             </div>
             <div className="barra"></div>
             <div className="container">
@@ -61,25 +61,21 @@ const Register = () => {
                     <div className="campo-form">
                         <input
                             type="submit"
-                            className="btn btn-primario btn-block"
                             value="Crear cuenta"
                             className="button"
                             
                         />
                     </div> 
 
-                    <Link to={'/'} className="enlace-cuenta">
-                    ¿Ya tienes una cuenta?
-                    </Link>
+                    <p className="enlace-cuenta text-center">
+                        ¿Ya tienes una cuenta?
+                    </p>
 
 
                     <div className="campo-form">
-                        <input
-                            type="submit"
-                            className="btn btn-primario btn-block"
-                            value="Iniciar sesion"
-                            className="button-login"
-                        />
+                    <Link to={'/'} className="button-login">
+                            Iniciar Sesion
+                        </Link>
                     </div>
                 </form>
             </div>
