@@ -5,6 +5,7 @@ import NavBar from '../components/navbar';
 import Carousel2 from '../components/carousel2';
 import Cards from '../components/cards';
 import CardsNoticias from '../components/cardsNoticias';
+import Patentes from '../components/patentes';
 import Inovacion from '../components/innovacion';
 import Footer from '../components/footer';
 
@@ -16,6 +17,7 @@ const Feed = () => {
             <Carousel2 /> 
             <Cards />
             <CardsNoticias />
+            <Patentes />
             <Inovacion />
             <Footer />
         </div>

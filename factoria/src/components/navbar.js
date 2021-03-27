@@ -44,7 +44,7 @@ const NavBar = () => {
                 </div>
 
 
-                <div className="rounded-pill d-block search px-1">
+                <div className="rounded-pill search px-1">
                     <ul>
                         <li>
                             <select className="align-items-left">
@@ -56,7 +56,7 @@ const NavBar = () => {
                         <li className="buscarTexto">
                             <input type="text" className="align-items-center" placeholder="¿Qué deseas buscar?"></input>
                         </li>
-                        <li className="justify-content-end">
+                        <li className="float-right">
                             <button className="lupa"> <i class="fas fa-search"></i> </button>
                         </li>
                     </ul>
