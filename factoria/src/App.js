@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom
 
 import Feed from './pages/feed';
 import Login from './components/auth/Login';
+import LoginPage from './pages/login';
 import Register from './components/auth/Register';
 import Nofound from './components/layout/Nofound';
 import Panel from './components/panel/Panel';
@@ -16,7 +17,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Feed}/>
         <Route exact path="/404" component={Nofound}/>
-        <Route exact path="/login" component={Login}/>
+        <Route exact path="/login" component={LoginPage}/>
         <Route exact path="/register" component={Register}/>      
         <Route exact path="/panel" component={Panel}/>
         <Route exact path="/investigaciones" component={Investigaciones}/>

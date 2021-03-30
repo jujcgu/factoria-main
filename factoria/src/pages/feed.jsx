@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Logo from '../components/logoHeader';
 import NavBar from '../components/navbar';
 import Carousel2 from '../components/carousel2';
