@@ -26,8 +26,7 @@ html {
 
 body {
     min-height: 100%;
-    /* background-color: var(--colorPrimaro);  */
-    font-size: 16px;
+    /* background-color: var(--colorPrimaro); */
     font-size: 1.6rem;
     font-family: var(--textFont);
 }
@@ -96,7 +95,6 @@ h2 {
     background-color: var(--colorSecundario);
 }
 
-
 /**Contenedor**/
 
 .container {
@@ -104,11 +102,17 @@ h2 {
     margin: 0 auto;
 }
 
+.bodyLogin{
+    background-color: var(--colorPrimaro);
+    padding-top: 15rem;
+}
+
 .form {
     width: 80%;
     background-color: var(--blanco);
-    margin-top: 20rem;
+    /* margin-top: 20rem; */
     padding: 10rem;
+    padding-bottom: 4rem !important;
     border-radius: 20px 20px 20px 20px;
     -moz-border-radius: 20px 20px 20px 20px;
     -webkit-border-radius: 20px 20px 20px 20px;
@@ -118,7 +122,6 @@ h2 {
 @media(min-width:360px) {
     .form {
         width: 95%;
-        margin: 12rem auto;
     }
 }
 
@@ -249,6 +252,18 @@ a {
 
 /**Pagina no found**/
 
+.sectionPageNotFound{
+    background-color: var(--colorPrimaro);
+    width: 100%;
+    height: 100%;
+}
+
+.espaciadoPageNotFound{
+    background-color: var(--colorPrimaro);
+    height: 14.5rem;
+}
+
+
 .fondo {
     padding: 3rem;
     background-color: var(--blanco);
@@ -256,19 +271,20 @@ a {
     width: 90%;
     display: block;
     margin: 5rem auto;
+    margin-bottom: 0px !important;
 }
 
 @media(min-width:480px) {
     .fondo {
         padding: 7rem 10rem;
-        margin-top: 10rem;
+        margin-top: 0rem;
     }
 }
 
 .img-usco {
     width: 40%;
     display: block;
-    margin: 5rem auto;
+    margin: 0 auto;
 }
 
 

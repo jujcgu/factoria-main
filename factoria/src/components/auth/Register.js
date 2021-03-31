@@ -14,6 +14,7 @@ const Register = () => {
                 <img src={LogoUsco} className="logolargo"></img>
             </div>
             <div className="barra"></div>
+            
             <div className="container">
                 <form className="form relative"
                 onSubmit={onSubmit}>

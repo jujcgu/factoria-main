@@ -1,8 +1,9 @@
 import React from 'react';
-import Logousco from '../../img/logocorto2.png';
+import Logousco from '../img/logocorto2.png';
 
-const Nofound = () => {
-    return (
+const NotFound = () => {
+
+    return(
 
         <section className="sectionPageNotFound w-100 h-100">
             <div className="espaciadoPageNotFound w-100"></div>
@@ -17,7 +18,8 @@ const Nofound = () => {
             </div>
             <div className="espaciadoPageNotFound w-100"></div>
         </section>
+
     );
 }
 
-export default Nofound;
+export default NotFound;

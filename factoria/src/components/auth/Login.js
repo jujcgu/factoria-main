@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Logo from '../../img/400x400.png';
 import LogoUsco from '../../img/logolargo.png';
 
@@ -15,65 +15,67 @@ const Login = () => {
                 <img src={LogoUsco} className="logolargo"></img>
             </div>
             <div className="barra"></div>
-            <div className="container">
-                <form className="form relative"
-                onSubmit={onSubmit}>
-                    <img className="imglogin absolute" src={Logo}/>
-                    <h1 className="text-center">Inicio Sesion</h1>
+            <div className="bodyLogin">
+                <div className="container">
+                    <form className="form relative w-100"
+                        onSubmit={onSubmit}>
+                        <img className="imglogin absolute ml-5" src={Logo} />
+                        <h1 className="text-center">Inicio Sesion</h1>
 
-                    <div className="campo-form ">
-                    
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Tu email"
-                            className="input"
-                            required
-                        />
-                    </div>
+                        <div className="campo-form ">
 
-                    <div className="campo-form ">
-                        
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Tu contraseña"
-                            className="input"
-                            required
-                        />
-                    </div>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Tu email"
+                                className="input"
+                                required
+                            />
+                        </div>
 
-                    <div className="campo-form">
-                        <input
-                            type="submit"
-                            value="Ingresar"
-                            className="button"
-                        />
-                    </div> 
+                        <div className="campo-form ">
 
-                    <a href="#!">¿Olvidaste tu contraseña?</a>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Tu contraseña"
+                                className="input"
+                                required
+                            />
+                        </div>
 
-                    <p className="enlace-cuenta text-center">
-                        ¿No tienes una cuenta?
+                        <div className="campo-form">
+                            <input
+                                type="submit"
+                                value="Ingresar"
+                                className="button"
+                            />
+                        </div>
+
+                        <a href="#!">¿Olvidaste tu contraseña?</a>
+
+                        <p className="enlace-cuenta text-center">
+                            ¿No tienes una cuenta?
                     </p>
 
-                    <div className="campo-form">
+                        <div className="campo-form">
 
-                        <Link to={'/register'} className="button-login">
-                            Registrate
+                            <Link to={'/register'} className="button-login">
+                                Registrate
                         </Link>
 
-                    </div>
-                </form>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-        
-        
+
+
     );
 }
- 
+
 export default Login;
 
 
