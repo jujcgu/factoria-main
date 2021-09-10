@@ -1,0 +1,58 @@
+.calendario{
+    background-color: rgba(240,240,240);
+    padding: 12px 0px 10px 0px;
+    max-width: 240px;
+    margin:auto;
+}
+.nombre_Meses{
+    color:rgba(87, 109, 126);
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.calendario-week-header{
+    color:rgba(87, 109, 126);
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.calendario button:focus{
+    outline: none;
+}
+.calendario-btn-change{
+    font-family: monospace;
+    font-weight: bold;
+    width: 1.8em;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0;
+}
+.calendario-btn-change:hover{
+    background-color: #ddd;
+}
+.calendario-header{
+    margin-bottom: 10px;
+}
+
+.calendario-day{
+    padding: 2px;
+}
+.calendario-day button{
+    width: 100%;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    /* border-bottom: 4px solid #fff; */
+    background-color: rgba(240,240,240);
+    color: rgba(147, 147, 147);
+}
+.calendario-day button:hover{
+    background-color: #eee;
+    color: rgba(120, 120, 120);
+    /* border-bottom: 4px solid #eee; */
+}
+.calendario-week-header{
+    margin-bottom: 10px;
+}
+.calendario-today{
+    font-weight: bold;
+    background-color: #DFD4A6 !important;
+}
