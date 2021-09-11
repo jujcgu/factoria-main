@@ -9,7 +9,7 @@ import {
   ModalBody,
   FormGroup,
   ModalFooter,
-} from "reactstrap";
+}from "reactstrap";
 
 const data = [
   { id: 1, rol: "Admin" },
