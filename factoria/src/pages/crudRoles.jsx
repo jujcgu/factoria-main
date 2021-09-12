@@ -1,6 +1,5 @@
 import React from 'react';
-import Crud from '../components/crud/CrudRoles';
-import NavBar from '../components/navbar';
+import CrudRol from '../components/crud/CrudRoles';
 import Logo from '../img/logocorto2.png';
 
 const CrudRoles = () => {
@@ -9,9 +8,8 @@ const CrudRoles = () => {
             <div className="fondo2 text-center">
                 <img className="logo" src={Logo} />
             </div>
-                <>                
-                <NavBar/>
-                <Crud />
+                <>        
+                <CrudRoles/>
                 </>
         </div>
     );

@@ -26,25 +26,16 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse justify-content-end navbar-secundaria" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-<<<<<<< HEAD
                             <a href="#" className='nav-link mb-0'> <i class="fas fa-hand-point-right"></i> Iniciar sesion</a>
                         </li>
                         <li className="borde"></li>
                         <li className="nav-item">
                             <a href="#" className='nav-link mb-0'> <i class="fas fa-user-circle"></i> Registrarse</a>
-=======
-                            <a href="#" className='nav-link mb-0'> <i class="fas fa-hand-point-right"></i> Cerrar Sesion </a>
-                        </li>
-                        <li className="borde"></li>
-                        <li className="nav-item">
-                            <a href="#" className='nav-link mb-0'> <i class="fas fa-user-circle"></i> Perfil </a>
->>>>>>> master
                         </li>
                     </ul>
                 </div>
             </nav>
 
-<<<<<<< HEAD
             <div className="d-flex justify-content-between align-items-center div-nav-principal">
 
                 <div className="d-flex align-items-center ES">
@@ -87,9 +78,6 @@ const NavBar = () => {
                 </div>
 
             </div>
-=======
-            
->>>>>>> master
 
         </section>
     );
