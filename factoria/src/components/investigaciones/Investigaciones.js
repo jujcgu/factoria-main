@@ -1,5 +1,5 @@
 import React from 'react';
-import ListadoInv from '../investigaciones/ListadoInv';
+import ListadoInv from './ListadoInv';
 import DetallesGrupo from './DetallesGrupo';
 import logousco from '../../img/logo usco.png';
 import Logo from '../../img/400x400.png';
