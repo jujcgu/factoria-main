@@ -11,6 +11,7 @@ import NotFound from './pages/notFound';
 import Panel from './components/panel/Panel';
 import Investigaciones from './components/investigaciones/Investigaciones';
 import NuevaPub from './components/publicaciones/NuevaPub';
+import Cruds from './pages/crud';
 import CrudRoles from './pages/crudRoles';
 
 
@@ -25,7 +26,8 @@ function App() {
         <Route exact path="/panel" component={Panel}/>
         <Route exact path="/investigaciones" component={Investigaciones}/>
         <Route exact path="/crear-publicacion" component={NuevaPub}/>
-        <Route exact path="/crud-roles" component={CrudRoles}/> 
+        <Route exact path="/crud" component={Cruds}/>
+        <Route exact path="/crudRoles" component={CrudRoles}/>
         <Redirect to="notFound"/>
       </Switch>
     </Router>

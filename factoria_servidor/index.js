@@ -1,7 +1,7 @@
-const express = require('express')
-const app = express()
-const bodyParser = require('body-parser')
-const cors = require('cors')
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const port = 3001
 
 var mysql      = require('mysql');
@@ -16,24 +16,50 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/api/get-roles', (req, res) => {
+app.get('/api/select-roles', (req, res) => {
 
     const sqlRolesSelect = "SELECT * FROM factoria.roles";
     connection.query(sqlRolesSelect, (err, result) => {
-        res.send(result);        
+      res.send(result);        
     });
 });
 
-app.post('/api/editar-roles', (req, res) => {
+app.post('/api/insert-roles', (req, res) => {
+  const id = req.body.id;
+  const nombre = req.body.nombre;
+  const permisos = req.body.permisos;
 
-    const nombre = req.body.nombre;
-    const id = req.body.id;
+  const sqlRolesInsert = "INSERT INTO roles (id, nombre, permisos) VALUES(?, ?, ?)";
+  connection.query(sqlRolesInsert, [id, nombre, permisos], (err, result) => {
+    console.log(result);
+  });
+});
 
-    const sqlRolesUpdate = "UPDATE roles SET nombre WHERE id=?";
-    connection.query(sqlRolesUpdate, [id, nombre]
-    , (err, result) => {
-      console.log(result);
-    });
+app.put("/api/update-roles", (req, res) => {
+  const id = req.body.id;
+  const nombre = req.body.nombre;
+  connection.query(
+    "UPDATE roles SET nombre = ? WHERE id = ?",
+    [nombre, id],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
+app.delete("/api/delete-roles/:id", (req, res) => {
+  const id = req.params.id;
+  connection.query("DELETE FROM roles WHERE id = ?", id, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
 });
 
 app.listen(port, () => {

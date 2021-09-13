@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Axios from 'axios'
 import {
   Table,
   Button,
@@ -11,18 +11,6 @@ import {
   FormGroup,
   ModalFooter,
 } from "reactstrap";
-
-function CrudRol() {
-
-const [id, setId] = useState('');
-const [nombre, setNombre] = useState('');
-
-const submitNombre = () => {
-  Axios.post('http://localhsot:3001/api/roles-editar', 
-  { nombre: nombre }).then(() =>{
-    alert("edicion exitosa");  
-  });
-};
 
 const data = [
   { id: 1, rol: "Admin" },
@@ -42,7 +30,7 @@ class Crud extends React.Component {
 
     },
   };
-
+  
 
   mostrarModalActualizar = (dato) => {
     this.setState({
@@ -122,9 +110,9 @@ class Crud extends React.Component {
           <Table>
             <thead>
               <tr>
-
+                
                 <th>ID</th>
-                <th style={{ paddingLeft: '450px' }}>rol</th>
+                <th style={{ paddingLeft : '450px'}}>rol</th>
 
                 <th>Acción</th>
               </tr>
@@ -134,7 +122,7 @@ class Crud extends React.Component {
               {this.state.data.map((dato) => (
                 <tr key={dato.id}>
                   <td>{dato.id}</td>
-                  <td style={{ paddingLeft: '450px' }}>{dato.rol}</td>
+                  <td style={{ paddingLeft : '450px'}}>{dato.rol}</td>
                   <td>
                     <Button
                       color="danger"
@@ -152,7 +140,7 @@ class Crud extends React.Component {
 
         <Modal isOpen={this.state.modalActualizar}>
           <ModalHeader>
-            <div><h3>Editar Rol</h3></div>
+            <div><h3>Editar Registro</h3></div>
           </ModalHeader>
 
           <ModalBody>
@@ -163,13 +151,9 @@ class Crud extends React.Component {
 
               <input
                 className="form-control"
-                name="id"                
-                type="text"
                 readOnly
-                /*value={this.state.form.id}*/
-                onChange={(e) => {
-                  setId(e.target.value)
-                }}
+                type="text"
+                value={this.state.form.id}
               />
             </FormGroup>
 
@@ -179,11 +163,10 @@ class Crud extends React.Component {
               </label>
               <input
                 className="form-control"
-                name="nombre"
-                type="text"                
-                onChange={(e) => {
-                  setId(e.target.value)
-                }}
+                name="rol"
+                type="text"
+                onChange={this.handleChange}
+                value={this.state.form.rol}
               />
             </FormGroup>
 
@@ -194,13 +177,13 @@ class Crud extends React.Component {
               color="danger"
               onClick={() => this.editar(this.state.form)}
             >
-              Guardar
+              Editar
             </Button>
             <Button
               color="danger"
               onClick={() => this.cerrarModalActualizar()}
             >
-              Cerrar
+              Cancelar
             </Button>
           </ModalFooter>
         </Modal>
@@ -260,4 +243,4 @@ class Crud extends React.Component {
     );
   }
 }
-}export default CrudRol;
+export default Crud;
