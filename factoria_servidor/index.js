@@ -84,6 +84,7 @@ connection.query(sqlRolesInsert, [id, nombre, moneda], (err, result) => {
 app.put("/api/update-pais", (req, res) => {
 const id = req.body.id;
 const nombre = req.body.nombre;
+const moneda = req.body.moneda;
 connection.query(
   "UPDATE pais SET nombre = ?, moneda = ? WHERE id = ?",
   [nombre, moneda, id],
