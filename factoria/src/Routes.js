@@ -19,6 +19,8 @@ import NuevaPub from "./components/publicaciones/NuevaPub";
 import Cruds from "./pages/crud";
 import CrudRoles from "./pages/crudRoles";
 import Departamentos from "./components/views/departamentos/Departamentos";
+import CrearCiudad from "./components/views/ciudades/crearCiudad";
+import EditarCiudad from "./components/views/ciudades/editarCiudad";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
         <Route exact path="/crud" component={Cruds} />
         <Route exact path="/crudRoles" component={CrudRoles} />
         <Route path="/departamentos" exact component={Departamentos} />
+        <Route exact path="/crear-ciudad" component={CrearCiudad} />
+        <Route exact path="/editar-ciudad" component={EditarCiudad} />
         <Redirect to="notFound" />
       </Switch>
     </Router>

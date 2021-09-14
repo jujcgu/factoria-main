@@ -1,25 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { getDepartamentos } from "../../../services/apiDepartamentos";
+import React from "react";
+import { Link } from "react-router-dom";
 import Logoimg from "../../../img/logo usco.png";
-import "./Departamentos.css";
-
-const Departamentos = () => {
-  const [departamentos, setDepartamentos] = useState([]);
-
-  useEffect(() => {
-    fetchDepartamentos();
-  }, []);
-
-  const fetchDepartamentos = () => {
-    getDepartamentos().then((json) => {
-      if (json.error) {
-        console.log("error");
-      } else {
-        setDepartamentos(json.data);
-      }
-    });
-  };
-
+import "./Ciudades.css";
+const EditarCiudad = () => {
   const onSubmit = (e) => {
     e.prevenDefault();
   };
@@ -30,17 +13,29 @@ const Departamentos = () => {
         <div className="cerrar">
           <a href="">Cerrar</a>
         </div>
-        <img alt="logo de la universidad" className="icon" src={Logoimg} />
+        <img className="icon" src={Logoimg} />
       </div>
 
       <div className="underline">
-        <h1> Añadir Departamentos</h1>
+        <h1> Editar Ciudad</h1>
       </div>
       <form action="#" method="post" id="contact_form">
         <div className="box">
           <div className="left">
             <div className="content">
-              <label className="labels">NOMBRE DEL PAIS</label>
+              <label className="labels">ID</label>
+            </div>
+          </div>
+          <div className="right">
+            <div className="content">
+              <input type="text" />
+            </div>
+          </div>
+        </div>
+        <div className="box">
+          <div className="left">
+            <div className="content">
+              <label className="labels">NOMBRE DE CIUDAD</label>
             </div>
           </div>
           <div className="right">
@@ -57,18 +52,16 @@ const Departamentos = () => {
           </div>
           <div className="right">
             <div className="content">
-              {" "}
-              {departamentos &&
-                departamentos.map((departamento, i) => (
-                  <select
-                    placeholder="Subject line"
-                    name="subject"
-                    id="subject_input"
-                    required
-                  >
-                    <option key={i}>{departamento.nombre}</option>
-                  </select>
-                ))}
+              <select
+                placeholder="Subject line"
+                name="subject"
+                id="subject_input"
+                required
+              >
+                <option></option>
+                <option></option>
+                <option></option>
+              </select>
             </div>
           </div>
         </div>
@@ -92,4 +85,4 @@ const Departamentos = () => {
   );
 };
 
-export default Departamentos;
+export default EditarCiudad;
