@@ -57,18 +57,18 @@ const Departamentos = () => {
           </div>
           <div className="right">
             <div className="content">
-              {" "}
-              {departamentos &&
-                departamentos.map((departamento, i) => (
-                  <select
-                    placeholder="Subject line"
-                    name="subject"
-                    id="subject_input"
-                    required
-                  >
+              <select
+                placeholder="Subject line"
+                name="subject"
+                id="subject_input"
+                required
+              >
+                {" "}
+                {departamentos &&
+                  departamentos.map((departamento, i) => (
                     <option key={i}>{departamento.nombre}</option>
-                  </select>
-                ))}
+                  ))}
+              </select>
             </div>
           </div>
         </div>
