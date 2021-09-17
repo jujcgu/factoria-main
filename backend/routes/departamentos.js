@@ -3,14 +3,14 @@ const router = express.Router();
 
 const {
   getDepartamentos,
-  getById,
+  getDepartamentoById,
   createDepartamento,
   updateDepartamento,
   deleteDepartamento,
 } = require("../controllers/departamentoController");
 
 router.get("/", getDepartamentos);
-router.get("/:departamentoId", getById);
+router.get("/:departamentoId", getDepartamentoById);
 
 router.post("/create", createDepartamento);
 router.post("/update/:departamentoId", updateDepartamento);

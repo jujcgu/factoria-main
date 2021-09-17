@@ -1,8 +1,8 @@
-exports.list = () => {
+exports.listDepartamento = () => {
   return "SELECT * FROM departamento";
 };
 
-exports.getById = (id) => {
+exports.getDepartamentoById = (id) => {
   return `SELECT * FROM departamento where id = '${id}'`;
 };
 

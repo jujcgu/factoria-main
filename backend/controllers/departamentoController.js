@@ -3,7 +3,7 @@ const sql = require("../sql/departamentos_queries");
 
 exports.getDepartamentos = async (req, res) => {
   try {
-    pool.query(sql.list(), (err, response) => {
+    pool.query(sql.listDepartamento(), (err, response) => {
       if (err) throw err;
       if (response) {
         res.json(response);
@@ -15,10 +15,10 @@ exports.getDepartamentos = async (req, res) => {
   }
 };
 
-exports.getById = async (req, res) => {
+exports.getDepartamentoById = async (req, res) => {
   let id = req.params.departamentoId;
   try {
-    pool.query(sql.getById(id), (err, response) => {
+    pool.query(sql.getDepartamentoById(id), (err, response) => {
       if (err) console.log(err);
       if (response) res.json(response);
       res.end();
