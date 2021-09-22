@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logoimg from "../../../img/logo usco.png";
 import "./Ciudades.css";

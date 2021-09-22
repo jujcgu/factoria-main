@@ -17,6 +17,8 @@ require("dotenv").config();
 }); */
 app.use("/api/departamentos", require("./routes/departamentos"));
 
+app.use("/api/ciudad", require("./routes/ciudad"));
+
 //port
 const port = process.env.PORT;
 

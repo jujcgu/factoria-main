@@ -1,4 +1,4 @@
-
+/*
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -243,4 +243,4 @@ class Crud extends React.Component {
     );
   }
 }
-export default Crud;
+export default Crud;*/
