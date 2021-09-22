@@ -19,6 +19,8 @@ import NuevaPub from "./components/publicaciones/NuevaPub";
 import Cruds from "./pages/crud";
 import CrudRoles from "./pages/crudRoles";
 import Departamentos from "./components/views/departamentos/Departamentos";
+import editDepartamentos from "./components/views/departamentos/editDepartamentos";
+
 import CrearCiudad from "./components/views/ciudades/crearCiudad";
 import EditarCiudad from "./components/views/ciudades/editarCiudad";
 
@@ -36,6 +38,8 @@ function App() {
         <Route exact path="/crud" component={Cruds} />
         <Route exact path="/crudRoles" component={CrudRoles} />
         <Route path="/departamentos" exact component={Departamentos} />
+        <Route path="/editdepartamentos" exact component={editDepartamentos} />
+
         <Route exact path="/crear-ciudad" component={CrearCiudad} />
         <Route exact path="/editar-ciudad" component={EditarCiudad} />
         <Redirect to="notFound" />
