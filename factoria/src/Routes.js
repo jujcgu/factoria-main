@@ -18,14 +18,8 @@ import Investigaciones from "./components/investigaciones/Investigaciones";
 import NuevaPub from "./components/publicaciones/NuevaPub";
 import CrudRoles from "./pages/crudRoles";
 import Departamentos from "./components/views/departamentos/Departamentos";
-import CrearCiudad from "./components/views/ciudad/crearCiudad";
-import EditarCiudad from "./components/views/ciudad/editarCiudad";
 import GestionCiudad from "./pages/gestionCiudad";
-
 import editDepartamentos from "./components/views/departamentos/editDepartamentos";
-
-import CrearCiudad from "./components/views/ciudades/crearCiudad";
-import EditarCiudad from "./components/views/ciudades/editarCiudad";
 
 function App() {
   return (
@@ -41,9 +35,6 @@ function App() {
         <Route exact path="/crear-publicacion" component={NuevaPub} />        
         <Route path="/departamentos" exact component={Departamentos} />
         <Route path="/editdepartamentos" exact component={editDepartamentos} />
-
-        <Route exact path="/crear-ciudad" component={CrearCiudad} />
-        <Route exact path="/editar-ciudad" component={EditarCiudad} />
         <Route exact path="/gestion-ciudad" component={GestionCiudad} />
         <Redirect to="notFound" />
       </Switch>
