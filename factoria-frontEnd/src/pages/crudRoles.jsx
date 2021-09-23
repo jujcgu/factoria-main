@@ -68,7 +68,7 @@ function CrudRoles(){
         (response) => {
           setRolesLista(
             rolesLista.map((val) => {
-              return val.id == id
+              return val.id === id
                 ? {
                     id: val.id,
                     nombre: val.nombre,

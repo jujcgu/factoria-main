@@ -30,7 +30,7 @@ const Departamentos = () => {
         <div className="cerrar">
           <a href="">Cerrar</a>
         </div>
-        <img alt="logo de la universidad" className="icon" src={Logoimg} />
+        <img alt="logo-universidad" className="icon" src={Logoimg} />
       </div>
 
       <div className="underline">

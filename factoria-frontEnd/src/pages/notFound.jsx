@@ -9,7 +9,7 @@ const NotFound = () => {
             <div className="espaciadoPageNotFound w-100"></div>
             <div className="container">
                 <div className="fondo">
-                    <img src={Logousco} className="img-usco" />
+                    <img src={Logousco} className="img-usco" alt="logoLargo"/>
                     <div>
                         <h1 className="text-center">Error 404</h1>
                         <p className="parrafo text-center">Lo sentimos, no pudimos encontrar la pagina solicitada.</p>

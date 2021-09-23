@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import '../css/innovacion.css';
 import Calendario from './calendario';
 import Idea from '../img/idea.png';

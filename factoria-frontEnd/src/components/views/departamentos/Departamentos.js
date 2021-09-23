@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getDepartamentos } from "../../../services/apiDepartamentos";
 import Logoimg from "../../../img/logo usco.png";
-import "./Departamentos.css";
+// import "./Departamentos.css";
 
 const Departamentos = () => {
   const [departamentos, setDepartamentos] = useState([]);
@@ -28,9 +28,9 @@ const Departamentos = () => {
     <div id="container">
       <div className="icon_wrapper">
         <div className="cerrar">
-          <a href="">Cerrar</a>
+          <a href="/departamentos">Cerrar</a>
         </div>
-        <img alt="logo de la universidad" className="icon" src={Logoimg} />
+        <img alt="logo-universidad" className="icon" src={Logoimg} />
       </div>
 
       <div className="underline">
@@ -85,7 +85,7 @@ const Departamentos = () => {
           </div>
         </div>
         <div className="submit">
-          <a href="">Guardar</a>
+          <button onClick={onSubmit}>Guardar</button>
         </div>
       </form>
     </div>

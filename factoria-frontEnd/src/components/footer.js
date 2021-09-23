@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import '../css/footer.css';
 import LogoUsco from '../img/logo usco.png';
 
@@ -35,7 +35,7 @@ const Footer = () => {
                 <div className="row">
                     {/* Primera columna */}
                     <div className="col-4 imgLogoUscoFooter">
-                        <img className="d-block mx-auto " src={LogoUsco} alt="Card image cap" />
+                        <img className="d-block mx-auto " src={LogoUsco} alt="Card" />
                         <h4 className="text-center">Copyright&copy; 2021 USCO. All rigths reserved</h4>
                     </div>
                     {/* Segunda columna */}

@@ -8,7 +8,7 @@ const Cruds = () => {
     return (
         <div className="container">
             <div className="fondo2 text-center">
-                <img className="logo" src={Logo} />
+                <img className="logo" src={Logo} alt="logo"/>
             </div>
 
 

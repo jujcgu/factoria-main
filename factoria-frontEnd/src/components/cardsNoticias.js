@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import '../css/cardsNoticias.css';
 import imgCardNoticias from '../img/imgCardNoticias.png';
 import fotoCardNoticias from '../img/fotoCardNoticias.png';
@@ -23,12 +23,12 @@ const CardsNoticias = () => {
                                 {/* Primera Subcolumna */}
                                 <div className="col">
                                     <div className="card cardSubNoticias">
-                                        <img className="card-img-top d-block mx-auto imgCardNoticias" src={imgCardNoticias} alt="Card image cap" />
+                                        <img className="card-img-top d-block mx-auto imgCardNoticias" src={imgCardNoticias} alt="Card-cap" />
                                         <div className="card-body p-2">
                                             <div className="container">
                                                 <div className="row">
                                                     <div className="col-3">
-                                                        <img className="d-block mx-auto rounded-circle fotoCardSubnoticias" src={fotoCardNoticias} alt="Card image cap" />
+                                                        <img className="d-block mx-auto rounded-circle fotoCardSubnoticias" src={fotoCardNoticias} alt="Card-cap" />
                                                     </div>
                                                     <div className="col-9">
                                                         <hr className="lineaNoticiasCard" size="1px" />
@@ -53,12 +53,12 @@ const CardsNoticias = () => {
                                 {/* Segunda Subcolumna */}
                                 <div className="col">
                                     <div className="card cardSubNoticias shadow-lg">
-                                        <img className="card-img-top d-block mx-auto imgCardNoticias" src={imgCardNoticias} alt="Card image cap" />
+                                        <img className="card-img-top d-block mx-auto imgCardNoticias" src={imgCardNoticias} alt="Card-cap" />
                                         <div className="card-body p-2">
                                             <div className="container">
                                                 <div className="row">
                                                     <div className="col-3">
-                                                        <img className="d-block mx-auto rounded-circle fotoCardSubnoticias" src={fotoCardNoticias} alt="Card image cap" />
+                                                        <img className="d-block mx-auto rounded-circle fotoCardSubnoticias" src={fotoCardNoticias} alt="Card-cap" />
                                                     </div>
                                                     <div className="col-9">
                                                         <hr className="lineaNoticiasCard" size="1px" />
@@ -126,7 +126,7 @@ const CardsNoticias = () => {
                                 <div className="col">
                                     <div class="media mediaNoticias">
                                         <div className="media-parte-izquierda">
-                                            <img class="d-block mx-auto align-self-start mr-3 luloVisionimgMedia" src={LuloVision} alt="Generic placeholder image" />
+                                            <img class="d-block mx-auto align-self-start mr-3 luloVisionimgMedia" src={LuloVision} alt="Generic-image" />
                                             <span className="d-inline-flex d-flex justify-content-end w-100 SpanMediaNoticias">
                                                 <a href="#"><i class="fas fa-share-alt cardNoticiasiconoCompartir"></i></a>
                                                 <a href="#"><i class="fab fa-facebook cardNoticiasiconoRedes"></i></a>
@@ -146,7 +146,7 @@ const CardsNoticias = () => {
 
                                     <div class="media mediaNoticias mediaNoticias2">
                                         <div className="media-parte-izquierda">
-                                            <img class="d-block mx-auto align-self-start mr-3 luloVisionimgMedia" src={LuloVision} alt="Generic placeholder image" />
+                                            <img class="d-block mx-auto align-self-start mr-3 luloVisionimgMedia" src={LuloVision} alt="Generic-image" />
                                             <span className="d-inline-flex d-flex justify-content-end w-100 SpanMediaNoticias">
                                                 <a href="#"><i class="fas fa-share-alt cardNoticiasiconoCompartir"></i></a>
                                                 <a href="#"><i class="fab fa-facebook cardNoticiasiconoRedes"></i></a>

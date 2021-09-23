@@ -11,7 +11,7 @@ const Register = () => {
     return (
         <div>
             <div className="text-center">
-                <img src={LogoUsco} className="logolargo"></img>
+                <img src={LogoUsco} className="logolargo" alt="logoLargo"/>
             </div>
             <div className="barra"></div>
             

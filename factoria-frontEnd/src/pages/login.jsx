@@ -20,7 +20,7 @@ const LoginPage = () => {
                 <div className="container">
                     <form className="form relative w-100"
                         onSubmit={onSubmit}>
-                        <img className="imglogin absolute ml-5" src={Logoimg} />
+                        <img className="imglogin absolute ml-5" src={Logoimg} alt="logoLargo"/>
                         <h1 className="text-center">Inicio Sesion</h1>
 
                         <div className="campo-form ">
