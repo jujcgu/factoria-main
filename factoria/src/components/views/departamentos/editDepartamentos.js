@@ -3,7 +3,7 @@ import { getDepartamentos } from "../../../services/apiDepartamentos";
 import Logoimg from "../../../img/logo usco.png";
 import "./Departamentos.css";
 
-const Departamentos = () => {
+const EditDepartamentos = () => {
   const [departamentos, setDepartamentos] = useState([]);
 
   useEffect(() => {
@@ -92,4 +92,4 @@ const Departamentos = () => {
   );
 };
 
-export default Departamentos;
+export default EditDepartamentos;

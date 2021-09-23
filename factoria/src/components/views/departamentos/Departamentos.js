@@ -45,7 +45,7 @@ const Departamentos = () => {
           </div>
           <div className="right">
             <div className="content">
-              <input type="text" />
+              <select></select>
             </div>
           </div>
         </div>
