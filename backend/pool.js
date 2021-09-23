@@ -11,7 +11,7 @@ const pool = mysql.createPool({
 });
 
 pool.getConnection((err, connection) => {
-  if (err) console.log("Algo ocurrió mal");
+  if (err) console.log("Algo ocurrió mal al conectar con la DB");
   if (connection) connection.release();
   return;
 });

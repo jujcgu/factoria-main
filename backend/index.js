@@ -16,8 +16,7 @@ require("dotenv").config();
   res.json({ message: "Funciona soccer" });
 }); */
 app.use("/api/departamentos", require("./routes/departamentos"));
-
-app.use("/api/ciudad", require("./routes/ciudad"));
+app.use("/api/paises", require("./routes/paises"));
 
 //port
 const port = process.env.PORT;

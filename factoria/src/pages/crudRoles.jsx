@@ -51,6 +51,7 @@ function CrudRoles(){
   const añadirRol = () => {
 
       Axios.post('http://localhost:3001/api/insert-roles',{
+          id: id,
           nombre: nombre,
           permisos: permisos,
       });
@@ -135,13 +136,13 @@ function CrudRoles(){
           <ModalBody>
             <FormGroup>
               <label>
-                Rol:
+                Id:
               </label>
 
               <input
-                name="nombre"
+                name="id"
                 className="form-control"
-                onChange={(e) => { setNombre(e.target.value); } }
+                onChange={(e) => { setId(e.target.value); } }
                 type="text" />
             </FormGroup>
 
@@ -155,10 +156,21 @@ function CrudRoles(){
                 name="permisos"
                 type="text"
                 onChange={(e) => { setPermisos(e.target.value); } } />
-            </FormGroup>            
-          </ModalBody>
+            </FormGroup>
 
-                        
+            <FormGroup>
+              <label>
+                Rol:
+              </label>
+
+              <input
+                name="nombre"
+                className="form-control"
+                onChange={(e) => { setNombre(e.target.value); } }
+                type="text" />
+            </FormGroup>
+            
+          </ModalBody>
 
           <ModalFooter>
             <Button
