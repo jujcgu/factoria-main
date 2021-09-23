@@ -20,7 +20,7 @@ const RegisterPage = () => {
                 <div className="container">
                     <form className="form relative w-100"
                         onSubmit={onSubmit}>
-                        <img className="imglogin absolute ml-5" src={Logoimg} />
+                        <img className="imglogin absolute ml-5" src={Logoimg} alt="description of image" />
                         <h1 className="text-center">Registrate</h1>
 
                         <div className="campo-form ">

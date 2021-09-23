@@ -7,11 +7,8 @@ import {
 } from "react-router-dom";
 //Views
 import Feed from "./pages/feed";
-import Login from "./components/auth/Login";
 import LoginPage from "./pages/login";
-import Register from "./components/auth/Register";
 import RegisterPage from "./pages/register";
-import Nofound from "./components/layout/Nofound";
 import NotFound from "./pages/notFound";
 import Panel from "./components/panel/Panel";
 import Investigaciones from "./components/investigaciones/Investigaciones";
@@ -21,6 +18,15 @@ import CrudRoles from "./pages/crudRoles";
 import Departamentos from "./components/views/departamentos/Departamentos";
 import CrearCiudad from "./components/views/ciudades/crearCiudad";
 import EditarCiudad from "./components/views/ciudades/editarCiudad";
+
+// import Login from "./components/auth/Login";
+// import Register from "./components/auth/Register";
+// import Nofound from "./components/layout/Nofound";
+//PAISES
+import Pais from "./components/views/pais/pais";
+import AñadirPais from "./components/views/pais/añadirPais";
+import EditarPais from "./components/views/pais/editarPais";
+///PAISES
 
 function App() {
   return (
@@ -38,6 +44,11 @@ function App() {
         <Route path="/departamentos" exact component={Departamentos} />
         <Route exact path="/crear-ciudad" component={CrearCiudad} />
         <Route exact path="/editar-ciudad" component={EditarCiudad} />
+        {/* PAISES */}
+        <Route exact path="/paises" component={Pais} />
+        <Route exact path="/crear-pais" component={AñadirPais} />
+        <Route exact path="/editar-pais" component={EditarPais} />
+        {/* PAISES */}
         <Redirect to="notFound" />
       </Switch>
     </Router>

@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+}
+.App-header {
+  background-color: #8F141B;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #5C0E12;
+}
+
+.card{
+  border-radius: 1.0rem !important;
+}
+
+.card.paper{
+  margin-top: 3vh;
+  background-color: #dfd4a6 !important; 
+}
+
+.CentroV.col-md-8{
+  font-size: 1.4vw;
+  font-weight: bold;
+  padding-left: 0px;
+  color: #50646f;
+}
+
+.CentroV{
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+.textPara{
+  color: #4D626C;
+  font-size: 1vw;
+
+}
+.bigTitle.card-title.h5{
+  margin: 2vh 0vh 2vh 0vh;
+  font-family: revert;
+  font-weight: 400;
+  font-size: 2.5vw;
+  color: #8f8f8f;
+}
+
+.lightBorder{
+  color: #dc3545 !important;
+  /* border-color: #4D626C !important; */
+  border-radius: 5rem !important;
+  font-size: 1vw !important;
+}
+.lightBorder:hover{
+  color: #fff !important;
+  background-color: #8F141B !important;
+  border-radius: 5rem !important;
+}
+
+.red{
+  color: #fff !important;
+  /* border-color: #4D626C !important; */
+  background-color: #8F141B !important;
+  border-radius: 5rem !important;
+  font-size: 1.5vw !important;
+}
+.red-2{
+  color: #fff !important;
+  background-color: #8F141B !important;
+  border-radius: 5rem !important;
+  font-size: 0.9vw !important;
+}
+.red-2:hover{
+  color: #8F141B !important;
+  background-color: #fff !important;
+  border-radius: 5rem !important;
+  border: 2px solid #8F141B !important;
+}
+.red:hover{
+  color: #8F141B !important;
+  background-color: #fff !important;
+  border-radius: 5rem !important;
+  border: 2px solid #8F141B !important;
+}
+.btn{
+  padding: .175rem .75rem !important;
+  margin-left: 1vw;
+}
+.ContainerTr{
+  color: #fff;
+  font-size: 2vh;
+  height: 6vh;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+.ContainerTd{
+  background-color: #dfd4a6;
+  color: #50646f;
+  font-size: 2vh;
+  height: 6vh;
+  align-self: center;
+  margin: 10px 0px 10px 0px !important;
+  border-radius: 2vh;
+}
+.inputs::placeholder {
+  color: #50646f !important;
+  font-size: 1vw;
+}
+.clarito::placeholder {
+  color: #d1d6da !important;
+  font-size: 1vw;
+}
+.flex{
+  display: flex;
+  width: min-content;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.skip{
+  color: #8a8a8a;
+    font-style: oblique;
+    font-weight: 300;
+    text-align: start;
+}

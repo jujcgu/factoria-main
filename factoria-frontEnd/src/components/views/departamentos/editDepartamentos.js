@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getDepartamentos } from "../../../services/apiDepartamentos";
 import Logoimg from "../../../img/logo usco.png";
-import "./Departamentos.css";
+// import "./Departamentos.css";
 
 const Departamentos = () => {
   const [departamentos, setDepartamentos] = useState([]);
