@@ -12,11 +12,17 @@ app.use(cors());
 require("dotenv").config();
 
 //routes
-/* app.get("/api/test", (req, res) => {
-  res.json({ message: "Funciona soccer" });
-}); */
+//roles
+app.use("/api/roles", require("./routes/roles"));
+
+//departamento
 app.use("/api/departamentos", require("./routes/departamentos"));
+
+//pais
 app.use("/api/paises", require("./routes/paises"));
+
+//ciudad
+app.use("/api/ciudad", require("./routes/ciudad"));
 
 //port
 const port = process.env.PORT;
