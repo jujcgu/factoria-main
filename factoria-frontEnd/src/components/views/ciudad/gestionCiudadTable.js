@@ -284,7 +284,7 @@ const GestionCiudad = (props) => {
                             </ModalBody>
                             <ModalFooter>
                                 <Button color="primary" onClick={ejecutar}>{botonModalNombre}</Button>{' '}
-                                <Button color="secondary" onClick={toggle}>Cancel</Button>
+                                <Button color="secondary" onClick={toggle}>Cancelar</Button>
                             </ModalFooter>
                         </Modal>
                     </div>
