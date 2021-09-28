@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useState } from "react";
 import Axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavComponent from "../components/navbar";
 import {
   Table,
   Button,
@@ -14,7 +13,7 @@ import {
   ModalFooter,
 } from "reactstrap";
 
-function CrudRoles(){ 
+function Roles(){ 
 
   const mostrarModalInsertar = () => {
     setMostrarInsertar({mostrar:true})
@@ -43,14 +42,14 @@ function CrudRoles(){
   const [rolesLista, setRolesLista] = useState([]);
 
   useEffect(() => {
-      Axios.get('http://localhost:3001/api/select-roles').then((response) => {            
+      Axios.get('http://localhost:5000/api/roles/select-roles').then((response) => {            
           setRolesLista(response.data)
       })
   }, [])
 
   const añadirRol = () => {
 
-      Axios.post('http://localhost:3001/api/insert-roles',{
+      Axios.post('http://localhost:5000/api/roles/insert-roles',{
           id: id,
           nombre: nombre,
           permisos: permisos,
@@ -64,7 +63,7 @@ function CrudRoles(){
   };
 
   const editarRol = (id) => {
-      Axios.put("http://localhost:3001/api/update-roles", { nombre: nuevoNombre, id: id }).then(
+      Axios.put("http://localhost:5000/api/roles/update-roles", { nombre: nuevoNombre, id: id }).then(
         (response) => {
           setRolesLista(
             rolesLista.map((val) => {
@@ -83,26 +82,26 @@ function CrudRoles(){
 
 
 
-  const eliminarRol = (id) => {
-      Axios.delete(`http://localhost:3001/api/delete-roles/${id}`);
+  const eliminarRol = (id) => {  
+    Axios.delete(`http://localhost:5000/api/roles/delete-roles/${id}`);
   };
 
+
     return(
-      <><>
-        <NavComponent />                
+      <React.Fragment>
         <Container>
           <br />
           <Button color="danger" onClick={mostrarModalInsertar}>Crear</Button>
           <br />
-          <br />          
+          <br />
           <Table>
             <thead>
               <tr>
 
-                <th>ID</th>
-                <th style={{ paddingLeft: '450px' }}>rol</th>
-
-                <th>Acción</th>
+                <th>Id</th>
+                <th style={{ paddingLeft: '450px' }}>Rol</th>
+                <th></th>
+                
               </tr>
             </thead>
 
@@ -116,9 +115,9 @@ function CrudRoles(){
                       color="danger"
                       onClick={() => {
                         mostrarModalActualizar(dato.id);
-                    }}
+                      } }
                     >
-                      Editar                      
+                      Editar
                     </Button>{" "}
                     <Button color="danger" onClick={() => {
                       eliminarRol(dato.id);
@@ -128,7 +127,8 @@ function CrudRoles(){
               ))}
             </tbody>
           </Table>
-        </Container></><Modal isOpen={MostrarInsertar.mostrar}>
+        </Container>
+        <Modal isOpen={MostrarInsertar.mostrar}>
           <ModalHeader>
             <div><h3>Insertar rol</h3></div>
           </ModalHeader>
@@ -150,7 +150,7 @@ function CrudRoles(){
               <label>
                 permisos:
               </label>
-              
+
               <input
                 className="form-control"
                 name="permisos"
@@ -169,7 +169,7 @@ function CrudRoles(){
                 onChange={(e) => { setNombre(e.target.value); } }
                 type="text" />
             </FormGroup>
-            
+
           </ModalBody>
 
           <ModalFooter>
@@ -186,11 +186,9 @@ function CrudRoles(){
               Cancelar
             </Button>
           </ModalFooter>
-        </Modal>
-        
-        <Modal isOpen={MostrarActualizar.mostrar}>
+        </Modal><Modal isOpen={MostrarActualizar.mostrar}>
           <ModalHeader>
-            <div><h3>Editar Registro</h3></div>
+            <div><h3>Editar Rol</h3></div>
           </ModalHeader>
 
           <ModalBody>
@@ -206,8 +204,7 @@ function CrudRoles(){
                 type="text"
                 onChange={(e) => {
                   setNuevoNombre(e.target.value);
-                }}              
-              />
+                } } />
             </FormGroup>
 
           </ModalBody>
@@ -217,7 +214,7 @@ function CrudRoles(){
               color="danger"
               onClick={() => {
                 editarRol(nuevoId);
-              }}
+              } }
             >
               Editar
             </Button>
@@ -229,9 +226,6 @@ function CrudRoles(){
             </Button>
           </ModalFooter>
         </Modal>
-        
-        </>  
-
-        
-);
-}export default CrudRoles;
+      </React.Fragment>
+    );
+}export default Roles;

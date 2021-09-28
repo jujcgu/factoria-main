@@ -5,6 +5,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+
 //Views
 import Feed from "./pages/feed";
 import LoginPage from "./pages/login";
@@ -13,10 +14,18 @@ import NotFound from "./pages/notFound";
 import Panel from "./components/panel/Panel";
 import Investigaciones from "./components/investigaciones/Investigaciones";
 import NuevaPub from "./components/publicaciones/NuevaPub";
-import CrudRoles from "./pages/crudRoles";
+
+//Roles
+import Roles from "./components/views/roles/roles";
+
+//Ciudad
+import GestionCiudad from "./components/views/ciudad/gestionCiudad";
+import GestionCiudadTable from "./components/views/ciudad/gestionCiudadTable";
+import CrearCiudad from './components/views/ciudad/crearCiudad';
+import EditarCiudad from './components/views/ciudad/editarCiudad';
+
+//Departamentos
 import Departamentos from "./components/views/departamentos/Departamentos";
-import CrearCiudad from "./components/views/ciudades/crearCiudad";
-import EditarCiudad from "./components/views/ciudades/editarCiudad";
 
 // import Login from "./components/auth/Login";
 // import Register from "./components/auth/Register";
@@ -38,15 +47,28 @@ function App() {
         <Route exact path="/panel" component={Panel} />
         <Route exact path="/investigaciones" component={Investigaciones} />
         <Route exact path="/crear-publicacion" component={NuevaPub} />
-        <Route exact path="/crudRoles" component={CrudRoles} />
-        <Route path="/departamentos" exact component={Departamentos} />
+
+        { /*ROLES*/ }
+        <Route exact path="/roles" component={Roles} />        
+        { /*ROLES*/ }
+
+        {/* CIUDAD */}
+        <Route exact path="/gestion-ciudad" component={GestionCiudad} />
+        <Route exact path="/gestion-ciudad-table" component={GestionCiudadTable} />
         <Route exact path="/crear-ciudad" component={CrearCiudad} />
         <Route exact path="/editar-ciudad" component={EditarCiudad} />
+        {/* CIUDAD */}
+
+        {/* DEPARTAMENTOS */}
+        <Route path="/departamentos" exact component={Departamentos} />
+        {/* DEPARTAMENTOS */}
+
         {/* PAISES */}
         <Route exact path="/paises" component={Pais} />
         <Route exact path="/crear-pais" component={AñadirPais} />
         <Route exact path="/editar-pais" component={EditarPais} />
         {/* PAISES */}
+        
         <Redirect to="notFound" />
       </Switch>
     </Router>
