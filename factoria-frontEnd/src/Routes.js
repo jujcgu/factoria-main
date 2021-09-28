@@ -27,14 +27,10 @@ import EditarCiudad from './components/views/ciudad/editarCiudad';
 //Departamentos
 import Departamentos from "./components/views/departamentos/Departamentos";
 
-// import Login from "./components/auth/Login";
-// import Register from "./components/auth/Register";
-// import Nofound from "./components/layout/Nofound";
-//PAISES
+///PAISES
 import Pais from "./components/views/pais/pais";
 import AñadirPais from "./components/views/pais/añadirPais";
 import EditarPais from "./components/views/pais/editarPais";
-///PAISES
 
 function App() {
   return (

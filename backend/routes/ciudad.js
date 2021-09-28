@@ -2,8 +2,9 @@ const express = require("express");
 const router = express.Router();
 const pool = require("../pool");
 
-router.get("/select-ciudad", (req, res) => {
-    pool.query("SELECT * FROM factoria.ciudad", (err, result) => {
+router.get("/select-ciudad/:departamento_id", (req, res) => {
+    const departamento_id = req.params.departamento_id;
+    pool.query("SELECT factoria.ciudad.*, factoria.departamento.nombre as departamento_nombre FROM factoria.ciudad, factoria.departamento where factoria.ciudad.departamento_id = factoria.departamento.id and departamento_id=? order by nombre", departamento_id, (err, result) => {
       if (err) {
         console.log(err);
       } else {
@@ -36,7 +37,7 @@ router.put("/update-ciudad", (req, res) => {
     const departamento_id = req.body.departamento_id;
     
     pool.query(
-      "UPDATE factoria.ciudad SET nombre='' WHERE id = ? AND departamento_id = ?;",
+      "UPDATE factoria.ciudad SET nombre = ? WHERE id = ? AND departamento_id = ?",
       [nombre, id, departamento_id],
       (err, result) => {
         if (err) {
