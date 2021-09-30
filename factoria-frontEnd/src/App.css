@@ -108,6 +108,10 @@
   margin: 10px 0px 10px 0px !important;
   border-radius: 2vh;
 }
+.ContainerTd:hover{
+  background-color: #d4bf6b;
+  color: #50646f;
+}
 .inputs::placeholder {
   color: #50646f !important;
   font-size: 1vw;

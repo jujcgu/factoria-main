@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { Row } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
-import { getPaises } from '../../../../services/apiPais';
+import { getPaises, updatePais } from '../../../../services/apiPais';
+
+
 
 const List = (props) => (
     <>
         {props.items.map((item, i) => {
+        
             return (<>
                 <Row className="ContainerTd align-content-center" key={i}>
                     <Col xs={4} md={4}>
@@ -29,8 +32,12 @@ class Tbody extends Component {
             done: false,
             items: []
         };
+        this.getPais = this.getPais.bind(this);
     }
     componentDidMount() {
+        this.getPais();
+    }
+    getPais() {
         getPaises()
             .then(result => result.data)
             .then((items) => this.setState({

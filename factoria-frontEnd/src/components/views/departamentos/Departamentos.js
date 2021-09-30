@@ -21,7 +21,7 @@ const Departamentos = () => {
   };
 
   const onSubmit = (e) => {
-    e.prevenDefault();
+    e.preventDefault();
   };
 
   return (
