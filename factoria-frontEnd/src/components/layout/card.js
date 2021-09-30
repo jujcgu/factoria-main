@@ -4,7 +4,7 @@ import { Row } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import Paper from './paper'
-import Tabla from './../tabla/tabla'
+import Tabla from '../views/pais/tabla/tabla'
 import Acciones from './acciones'
 
 export default function Targeta() {

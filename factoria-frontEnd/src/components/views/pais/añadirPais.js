@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+
+import { setPais } from "../../../services/apiPais";
 
 import { Row } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
@@ -8,6 +10,16 @@ import { InputGroup } from 'react-bootstrap'
 import { FormControl } from 'react-bootstrap'
 
 export default function AñadirPais() {
+    const [nombre, setNombre] = useState('');
+    const [moneda, setMoneda] = useState('');
+
+    const registrar = async()=>{
+        const NuevoPais={nombre, moneda}
+        const respuesta = await setPais(NuevoPais);
+        console.log(respuesta);
+    }
+
+
     return (
         <>
             <Card style={{ width: '100%' }} text={'dark'}>
@@ -39,10 +51,7 @@ export default function AñadirPais() {
                                         <h5 className="skip">NOMBRE DEL PAIS</h5>
                                     </Col>
                                     <Col xs={5} sm={5} md={5}>
-                                        <FormControl className="inputs"
-                                            aria-label="AÑADIR PAIS"
-                                            aria-describedby="basic-addon2"
-                                        />
+                                        <FormControl required onChange={e=>setNombre(e.target.value)} className="inputs" aria-label="AÑADIR PAIS" aria-describedby="basic-addon2"/>
                                     </Col>
                                 </InputGroup>
                             </Row>
@@ -53,9 +62,7 @@ export default function AñadirPais() {
                                         <h5 className="skip">MONEDA</h5>
                                     </Col>
                                     <Col xs={5} sm={5} md={5}>
-                                        <FormControl className="inputs"
-                                            aria-label="MONEDA"
-                                            aria-describedby="basic-addon2"
+                                        <FormControl required onChange={e => setMoneda(e.target.value)} className="inputs" aria-label="MONEDA" aria-describedby="basic-addon2"
                                         />
                                     </Col>
                                 </InputGroup>

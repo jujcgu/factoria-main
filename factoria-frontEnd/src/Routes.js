@@ -29,8 +29,6 @@ import Departamentos from "./components/views/departamentos/Departamentos";
 
 ///PAISES
 import Pais from "./components/views/pais/pais";
-import AñadirPais from "./components/views/pais/añadirPais";
-import EditarPais from "./components/views/pais/editarPais";
 
 function App() {
   return (
@@ -61,8 +59,6 @@ function App() {
 
         {/* PAISES */}
         <Route exact path="/paises" component={Pais} />
-        <Route exact path="/paises/crear" component={AñadirPais} />
-        <Route exact path="/paises/editar" component={EditarPais} />
         {/* PAISES */}
         
         <Redirect to="notFound" />

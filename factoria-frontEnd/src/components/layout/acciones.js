@@ -33,7 +33,8 @@ class Acciones extends React.Component {
             top: '45%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            width: '60vw',
+            maxWidth: 'none',
+            width: '50vw',
             borderRadius: "25%"
         }
         return (
@@ -51,9 +52,9 @@ class Acciones extends React.Component {
                     </Col>
                     <Col xs={9} sm={9} md={9} style={{ textAlign: "end", alignSelf: "center" }}>
                         <Button className="lightBorder border border-dark" variant="light">Gestionar</Button>
-                        <Button type="button" onClick={() => this.abrirModal(2)} className="lightBorder border border-dark" variant="light">Editar</Button>
+                        <Button type="button" onClick={() => this.abrirModal(1)} className="lightBorder border border-dark" variant="light">Editar</Button>
                         <Button className="lightBorder border border-dark" variant="light">Eliminar</Button>
-                        <Button type="button" onClick={() => this.abrirModal(1)} className="red border border-dark" variant="light">Agregar País</Button>
+                        <Button type="button" onClick={() => this.abrirModal(2)} className="red border border-dark" variant="light">Agregar País</Button>
                     </Col>
                 </Row>
                 <Modal isOpen={this.state.abierto} style={modalStyles}>

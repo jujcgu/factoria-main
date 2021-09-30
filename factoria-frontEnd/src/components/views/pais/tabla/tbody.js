@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 import { Row } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
+import { getPaises } from '../../../../services/apiPais';
+
 const List = (props) => (
     <>
-        {props.items.map((item) => {
+        {props.items.map((item, i) => {
             return (<>
-                <Row className="ContainerTd align-content-center">
+                <Row className="ContainerTd align-content-center" key={i}>
                     <Col xs={4} md={4}>
                         {item.id}
                     </Col>
-                    <Col xs={4} md={4}>
+                    <Col xs={4} md={4} >
                         {item.nombre}
                     </Col>
                     <Col xs={4} md={4}>
@@ -29,9 +31,9 @@ class Tbody extends Component {
         };
     }
     componentDidMount() {
-        fetch('http://localhost:3001/api/paises', { method: 'GET' })
-            .then(result => result.json())
-            .then(items => this.setState({
+        getPaises()
+            .then(result => result.data)
+            .then((items) => this.setState({
                 done: true,
                 items
             }))
