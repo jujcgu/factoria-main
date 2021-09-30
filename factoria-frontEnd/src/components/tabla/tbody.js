@@ -1,66 +1,51 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Row } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
-
-export default function Tbody() {
-
-    return (
-        <Col>
-            <Row className="ContainerTd align-content-center">
-                <Col xs={4} md={4}>
-                    1
-                </Col>
-                <Col xs={4} md={4}>
-                    COLOMBIA
-                </Col>
-                <Col xs={4} md={4}>
-                    PESO (COP)
-                </Col>
-            </Row>
-            <Row className="ContainerTd align-content-center">
-                <Col xs={4} md={4}>
-                    2
-                </Col>
-                <Col xs={4} md={4}>
-                    MEXICO
-                </Col>
-                <Col xs={4} md={4}>
-                    PESO (MNX)
-                </Col>
-            </Row>
-            <Row className="ContainerTd align-content-center">
-                <Col xs={4} md={4}>
-                    3
-                </Col>
-                <Col xs={4} md={4}>
-                    ESPAÑA
-                </Col>
-                <Col xs={4} md={4}>
-                    EURO (EUR)
-                </Col>
-            </Row>
-            <Row className="ContainerTd align-content-center">
-                <Col xs={4} md={4}>
-                    4
-                </Col>
-                <Col xs={4} md={4}>
-                    CHILE
-                </Col>
-                <Col xs={4} md={4}>
-                    PESO (CLP)
-                </Col>
-            </Row>
-            <Row className="ContainerTd align-content-center">
-                <Col xs={4} md={4}>
-                    5
-                </Col>
-                <Col xs={4} md={4}>
-                    ARGENTINA
-                </Col>
-                <Col xs={4} md={4}>
-                    PESO (ARS)
-                </Col>
-            </Row>
-        </Col>
-    );
+const List = (props) => (
+    <>
+        {props.items.map((item) => {
+            return (<>
+                <Row className="ContainerTd align-content-center">
+                    <Col xs={4} md={4}>
+                        {item.id}
+                    </Col>
+                    <Col xs={4} md={4}>
+                        {item.nombre}
+                    </Col>
+                    <Col xs={4} md={4}>
+                        {item.moneda}
+                    </Col>
+                </Row>
+            </>);
+        })}
+    </>
+)
+class Tbody extends Component {
+    constructor() {
+        super();
+        this.state = {
+            done: false,
+            items: []
+        };
+    }
+    componentDidMount() {
+        fetch('http://localhost:3001/api/paises', { method: 'GET' })
+            .then(result => result.json())
+            .then(items => this.setState({
+                done: true,
+                items
+            }))
+    }
+    render() {
+        return (
+            <Col>
+                {this.state.done ? (
+                    <List items={this.state.items} />
+                ) : (
+                    <p>Cargando resultados...</p>
+                )}
+            </Col>
+        );
+    }
 }
+export default Tbody;

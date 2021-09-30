@@ -121,6 +121,9 @@
   flex-wrap: nowrap;
   justify-content: flex-end;
 }
+.modal-content{
+  border-radius: 1.3rem;
+}
 .skip{
   color: #8a8a8a;
     font-style: oblique;

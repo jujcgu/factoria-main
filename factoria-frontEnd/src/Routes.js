@@ -61,8 +61,8 @@ function App() {
 
         {/* PAISES */}
         <Route exact path="/paises" component={Pais} />
-        <Route exact path="/crear-pais" component={AñadirPais} />
-        <Route exact path="/editar-pais" component={EditarPais} />
+        <Route exact path="/paises/crear" component={AñadirPais} />
+        <Route exact path="/paises/editar" component={EditarPais} />
         {/* PAISES */}
         
         <Redirect to="notFound" />

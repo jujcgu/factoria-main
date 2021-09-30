@@ -12,14 +12,14 @@ const Login = () => {
     return (
         <div>
             <div className="text-center">
-                <img src={LogoUsco} className="logolargo"></img>
+                <img src={LogoUsco} className="logolargo" alt="logo"></img>
             </div>
             <div className="barra"></div>
             <div className="bodyLogin">
                 <div className="container">
                     <form className="form relative w-100"
                         onSubmit={onSubmit}>
-                        <img className="imglogin absolute ml-5" src={Logo} />
+                        <img className="imglogin absolute ml-5" src={Logo} alt="logo"/>
                         <h1 className="text-center">Inicio Sesion</h1>
 
                         <div className="campo-form ">
@@ -64,7 +64,7 @@ const Login = () => {
 
                             <Link to={'/register'} className="button-login">
                                 Registrate
-                        </Link>
+                            </Link>
 
                         </div>
                     </form>

@@ -8,9 +8,8 @@ exports.getPaisById = (id) => {
 
 exports.createPais = (Pais) => {
     return `
-      INSERT INTO Pais(id, nombre, pais_id)
+      INSERT INTO Pais(nombre, moneda)
       VALUES(
-        '${Pais.id}',
         '${Pais.nombre}',
         '${Pais.moneda}'
       )`;
@@ -18,16 +17,12 @@ exports.createPais = (Pais) => {
 
 exports.editPais = (Pais, id) => {
     return `
-      UPDATE Pais 
-          SET
+      UPDATE Pais SET
           nombre = '${Pais.nombre}',
-          id = '${Pais.id}',
           moneda = '${Pais.moneda}',
           WHERE id = ${id}
       `;
 };
-
-
 exports.deletePais = (id) => {
     return `DELETE FROM Pais WHERE id = '${id}'`;
 };
